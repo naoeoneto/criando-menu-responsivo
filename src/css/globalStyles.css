@@ -1,0 +1,22 @@
+* {
+    padding: 0;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Colors */
+    --color-primary: #364FC7;
+    --grey-scale-1: #212529;
+    --grey-scale-2: #868E96;
+    --grey-scale-3: #ADB5BD;
+    --grey-scale-4: #E9ECEF;
+    --grey-scale-5: #F1F3F5;
+    --grey-scale-6: #F8F9FA;
+    --white: #FFFFFF;
+
+    /* Font Sizes */
+    --font-size-1: 16px;
+    --font-size-2: 14px;
+    --font-size-3: 12px;
+}
