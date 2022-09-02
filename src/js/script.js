@@ -5,9 +5,17 @@ function showMenu(){
 
     button.addEventListener("click", event => {
         event.preventDefault()
-        menu.classList.toggle("show")
-        menuInput.classList.toggle("show")
-        button.innerText = "X"
+        if(menu.classList.toggle("show")){
+            button.innerText = "X"
+        } else {
+            button.innerText = "≡"
+        }
+
+        if(menuInput.classList.toggle("show")){
+            button.innerText = "X"
+        } else {
+            button.innerText = "≡"
+        }
     })
 }
 showMenu()

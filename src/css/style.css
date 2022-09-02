@@ -148,7 +148,7 @@ h2 {
         background-color: var(--white);
         border: 0;
         color: var(--grey-scale-3);
-        margin-right: 2rem;
+        margin-right: 0;
         cursor: pointer;
     }
 }
