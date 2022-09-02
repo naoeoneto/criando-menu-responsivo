@@ -7,7 +7,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="src/css/globalStyles.css">
     <link rel="stylesheet" href="src/css/style.css">
@@ -16,8 +16,10 @@
 <body>
     <nav class="menu">
         <div class="menu-logo">
-            <img src="src/assets/logo.png" alt="Logo Tech Blog">
+            <img src="src/assets/logo.png" alt="">
+            <button id="menuBtn">≡­­</button>
         </div>
+
         <ul class="menu-category">
             <li>All</li>
             <li>CSS</li>
@@ -25,12 +27,14 @@
             <li>Python</li>
             <li>Java</li>
         </ul>
+        
         <div class="menu-input">
             <input type="text" placeholder="Pesquisar por">
-            <img class="menu-avatar" src="src/assets/avatar.jpg" alt="Foto Perfil">
-            <h2>Antonio Neto</h2>
+            <div class="menu-info">
+                <img class="menu-avatar" src="src/assets/avatar.jpg" alt="Foto Perfil">
+                <h2>Antonio Neto</h2>
+            </div>
         </div>
-        <button>≡­­</button>
     </nav>
     <script src="src/js/script.js"></script>
 </body>

@@ -1,17 +1,21 @@
 .menu {
     display: flex;
-    height: 80px;
     padding: 1.75rem;
     border-bottom: 2px solid var(--grey-scale-4);
-    justify-content: center;
     align-items: center;
     font-family: 'Roboto';
+    gap: 6rem;
 }
 
 .menu-logo {
-    width: 15%;
+    color: var(--color-primary);
     margin-right: 0;
     align-items: center;
+    justify-content: center;
+}
+
+.menu-logo > img {
+    object-fit: cover;
 }
 
 .menu-category {
@@ -25,6 +29,8 @@
 
 li:hover {
     color: var(--grey-scale-1);
+    width: 100%;
+    align-items: center;
 }
 
 .menu-input {
@@ -56,6 +62,93 @@ h2 {
     font-size: 0;
 }
 
-button {
+#menuBtn {
     display: none;
+}
+
+@keyframes show-menu {
+    0% {
+        opacity: 0;
+        transform: translateY(-60%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .menu {
+        height: 4.5rem;
+        flex-direction: column;
+    }
+    
+    .menu-logo {
+        width: 100%;
+        margin: 0;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .menu-logo > img {
+        margin: 0;
+    }
+
+    .menu-category, .menu-input {
+        flex-direction: column;
+        width: 100%;
+        display: none;
+    }
+
+    .show {
+        display: flex;
+        flex-direction: column;
+        animation: show-menu 1s ease;
+    }
+
+    .menu-input {
+        margin-left: 0;
+    }
+
+    li {
+        margin-left: 0;
+        
+    }
+
+    li:hover {
+        background-color: var(--grey-scale-5);
+        transition: 1.5s ease;
+        padding: 19px;
+    }
+
+    .menu-info {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 50%;
+        margin-left: 0;
+    }
+
+    input {
+        width: 100%;
+    }
+
+    h2 {
+        display: block;
+        font-size: var(--font-size-2);
+        color: var(--grey-scale-1);
+    }
+    
+    #menuBtn {
+        display: flex;
+        width: 1.5rem;
+        font-size: var(--font-size-1);
+        font-weight: 700;
+        background-color: var(--white);
+        border: 0;
+        color: var(--grey-scale-3);
+        margin-right: 2rem;
+        cursor: pointer;
+    }
 }
