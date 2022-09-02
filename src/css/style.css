@@ -1,0 +1,154 @@
+.menu {
+    display: flex;
+    padding: 1.75rem;
+    border-bottom: 2px solid var(--grey-scale-4);
+    align-items: center;
+    font-family: 'Roboto';
+    gap: 6rem;
+}
+
+.menu-logo {
+    color: var(--color-primary);
+    margin-right: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-logo > img {
+    object-fit: cover;
+}
+
+.menu-category {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin-left: 0;
+    font-weight: 500;
+    color: var(--grey-scale-2);
+}
+
+li:hover {
+    color: var(--grey-scale-1);
+    width: 100%;
+    align-items: center;
+}
+
+.menu-input {
+    display: flex;
+    gap: 1.25rem;
+}
+
+input {
+    height: 14px;
+    width: 231px;
+    border-radius: 8px;
+    padding: 1.25rem 2rem;
+    background: var(--grey-scale-5) url(../assets/search.png) left no-repeat;
+    border: 0;
+}
+
+input::placeholder {
+    font-size: var(--font-size-3);
+    color: var(--grey-scale-3);
+}
+
+.menu-avatar {
+    height: 38px;
+    border-radius: 50%;
+    border: 2px solid var(--color-primary);
+}
+
+h2 {
+    font-size: 0;
+}
+
+#menuBtn {
+    display: none;
+}
+
+@keyframes show-menu {
+    0% {
+        opacity: 0;
+        transform: translateY(-60%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .menu {
+        height: 4.5rem;
+        flex-direction: column;
+    }
+    
+    .menu-logo {
+        width: 100%;
+        margin: 0;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .menu-logo > img {
+        margin: 0;
+    }
+
+    .menu-category, .menu-input {
+        flex-direction: column;
+        width: 100%;
+        display: none;
+    }
+
+    .show {
+        display: flex;
+        flex-direction: column;
+        animation: show-menu 1s ease;
+    }
+
+    .menu-input {
+        margin-left: 0;
+    }
+
+    li {
+        margin-left: 0;
+        
+    }
+
+    li:hover {
+        background-color: var(--grey-scale-5);
+        transition: 1.5s ease;
+        padding: 19px;
+    }
+
+    .menu-info {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 50%;
+        margin-left: 0;
+    }
+
+    input {
+        width: 100%;
+    }
+
+    h2 {
+        display: block;
+        font-size: var(--font-size-2);
+        color: var(--grey-scale-1);
+    }
+    
+    #menuBtn {
+        display: flex;
+        width: 1.5rem;
+        font-size: var(--font-size-1);
+        font-weight: 700;
+        background-color: var(--white);
+        border: 0;
+        color: var(--grey-scale-3);
+        margin-right: 2rem;
+        cursor: pointer;
+    }
+}
